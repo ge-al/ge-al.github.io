@@ -1,1 +1,96 @@
-<h1> George Altshuler </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+    <title>George Altshuler</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column for the body to center content */
+            font-family: 'EB Garamond', serif;
+            font-size: 22px;
+            margin: 0;
+            padding: 0 10%; /* Padding on the sides for larger screens */
+        }
+        .profile-container {
+            display: grid;
+            grid-template-areas: 
+                "title title"
+                "headshot content"; /* Side by side for headshot and content */
+            grid-template-columns: 400px auto; /* Headshot and content columns */
+            grid-template-rows: auto auto;
+            gap: 10px; /* Space between grid items */
+        }
+        #title {
+            grid-area: title;
+            text-align: center;
+            font-weight: bold;
+            font-size: 40px;
+            padding-bottom: 20px;
+        }
+        #headshot {
+            grid-area: headshot;
+            max-width: 100%; /* Responsive to container width */
+            justify-self: center; /* Centered within its cell */
+        }
+        .content {
+            grid-area: content;
+            padding-left: 10px; /* Spacing from the headshot */
+            align-self: start;
+        }
+        .line {
+            border-bottom: dotted 1px black;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        @media (max-width: 1000px) {
+            body {
+                padding: 0 5%; /* Smaller padding for narrower screens */
+            }
+            .profile-container {
+                grid-template-areas:
+                    "title"
+                    "headshot"
+                    "content"; /* Stacking title, headshot, and content */
+                grid-template-columns: 1fr; /* Single column layout */
+            }
+            .content {
+                justify-self: center; /* Center alignment within their cells */
+                max-width: 450px;
+                text-align: center;
+            }
+            #headshot {
+                max-width: 400px;
+            }
+        }
+        
+        /* Visited link */
+        a:visited,a:link {
+            color: #342e69; /* Already visited color */
+        }
+
+        /* Mouse over link */
+        a:hover {
+            color: #d2310d; /* Hover color */
+        }
+
+        /* Selected link */
+        a:active {
+            color: #f1f8f2; /* Color when the link is being clicked */
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <div id="title">George Altshuler</div>
+        <img src="headshot.png" alt="George Altshuler Headshot" id="headshot">
+        <div class="content">
+            I am a senior at Stanford University, where I primarily study ancient Greek language. I am interested in languages broadly, as well as linguistics, artificial intelligence, and psychology. <br> <br>
+            I am excited about using artificial intelligence to enhance second language acquisition and to support the preservation of endangered languages. <br> <br>
+            I also run <a href="https://alchemypeppers.com/" target="_blank">a hot sauce company</a>.
+        </div>
+    </div>
+    <div class="line"></div>
+</body>
+</html>
