@@ -44,7 +44,11 @@
             padding-top: 10px;
             padding-bottom: 10px;
         }
-        @media (max-width: 1000px) {
+        .stapp {
+            width: 100%;
+            height: 400px;
+        }
+        @media (max-width: 3000px) {
             body {
                 padding: 0 5%; /* Smaller padding for narrower screens */
             }
@@ -86,11 +90,17 @@
         <div id="title">George Altshuler</div>
         <img src="headshot.png" alt="George Altshuler Headshot" id="headshot">
         <div class="content">
+            <span style="font-weight: bold; font-size: 25px;">Academic Stuff:</span> <br>
             I am a senior at Stanford University, where I primarily study ancient Greek language. I am interested in languages broadly, as well as linguistics, artificial intelligence, and psychology. <br> <br>
-            I am excited about using artificial intelligence to enhance second language acquisition and to support the preservation of endangered languages. <br> <br>
-            I also run <a href="https://alchemypeppers.com/" target="_blank">a hot sauce company</a>.
+            I'm excited about using artificial intelligence to enhance second language acquisition and to support the preservation of endangered languages. <br> <br>
+            <span style="font-weight: bold; font-size: 25px;">Personal Stuff:</span> <br>
+
+            I founded <a href="https://alchemypeppers.com/" target="_blank">a hot sauce company</a> that was featured on Hot Ones and is sold at Erewhon. <br> 
         </div>
     </div>
     <div class="line"></div>
+
+    <!-- <iframe src="https://nationalanthem.streamlit.app/?embed=true" class="stapp"></iframe> -->
+
 </body>
 </html>
